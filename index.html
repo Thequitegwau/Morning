@@ -202,18 +202,18 @@
       document.getElementById('feedback').textContent = '';
     }
 
-   function checkAnswer(button, selected) {
+  function checkAnswer(button, selected) {
   const correct = questions[currentQuestion].answer;
   const buttons = document.querySelectorAll('.options button');
   buttons.forEach(btn => btn.disabled = true);
 
   if (selected === correct) {
     score++;
-    correctSound.play(); // 🔊 Play correct sound
+    document.getElementById('correctSound').play(); // ✅ Play correct sound
     button.classList.add('correct');
     document.getElementById('feedback').textContent = "✅ Correct!";
   } else {
-    wrongSound.play(); // 🔊 Play wrong sound
+    document.getElementById('wrongSound').play(); // ❌ Play wrong sound
     button.classList.add('wrong');
     document.getElementById('feedback').textContent = `❌ Wrong. Correct answer: "${correct}".`;
   }
@@ -227,6 +227,7 @@
     }
   }, 1500);
 }
+
 
     function showScore() {
       document.getElementById('game').innerHTML = `
