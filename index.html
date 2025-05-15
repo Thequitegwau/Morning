@@ -156,7 +156,7 @@
 
     function loadQuestion() {
       const q = questions[currentQuestion];
-      document.getElementById('question').textContent = Q${currentQuestion + 1}: ${q.sentence};
+      document.getElementById('question').textContent = `Q${currentQuestion + 1}: ${q.sentence}`;
       const optionsDiv = document.getElementById('options');
       optionsDiv.innerHTML = '';
       q.options.forEach(option => {
@@ -179,7 +179,7 @@
         document.getElementById('feedback').textContent = "✅ Correct!";
       } else {
         button.classList.add('wrong');
-        document.getElementById('feedback').textContent = ❌ Wrong. The correct answer was "${correct}".;
+        document.getElementById('feedback').textContent = `❌ Wrong. The correct answer was "${correct}".`;
       }
 
       setTimeout(() => {
@@ -193,11 +193,11 @@
     }
 
     function showScore() {
-      document.getElementById('game').innerHTML = 
+      document.getElementById('game').innerHTML = `
         <h2>🎉 Game Over!</h2>
         <p>You scored ${score} out of ${questions.length}.</p>
         <button class="play-again" onclick="location.reload()">Play Again</button>
-      ;
+      `;
     }
 
     loadQuestion();
