@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>B2 English Word Game</title>
+  <title>🧠BrainWords: B2 Vocabulary Game</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -107,6 +107,9 @@
       <div id="score" class="score"></div>
     </div>
   </div>
+  <audio id="correctSound" src="Right.mp3" preload="auto"></audio>
+<audio id="wrongSound" src="Wrong.mp3" preload="auto"></audio>
+
 
   <script>
     const questions = [
@@ -122,7 +125,7 @@
       },
       {
         sentence: "The teacher tried to ___ the students’ interest in literature.",
-        options: ["spark", "avoid", "delay", "suppress"],
+        options: ["delay", "avoid", "spark", "suppress"],
         answer: "spark"
       },
       {
@@ -132,12 +135,12 @@
       },
       {
         sentence: "He was ___ to hear the good news.",
-        options: ["delighted", "nervous", "offended", "confused"],
+        options: ["confused", "nervous", "offended", "delighted"],
         answer: "delighted"
       },
       {
         sentence: "You must ___ your password regularly to maintain security.",
-        options: ["change", "guess", "ignore", "hide"],
+        options: ["guess", "change", "ignore", "hide"],
         answer: "change"
       },
       {
@@ -147,12 +150,12 @@
       },
       {
         sentence: "He always speaks in a very ___ manner.",
-        options: ["polite", "noisy", "awkward", "clumsy"],
+        options: ["awkward", "noisy", "polite", "clumsy"],
         answer: "polite"
       },
       {
         sentence: "The new system will ___ the process of ordering products.",
-        options: ["streamline", "complicate", "abandon", "cancel"],
+        options: ["cancel", "complicate", "abandon", "streamline"],
         answer: "streamline"
       },
       {
@@ -162,7 +165,7 @@
       },
       {
         sentence: "Please ___ your seatbelts before takeoff.",
-        options: ["fasten", "untie", "remove", "cancel"],
+        options: ["remove", "untie", "fasten", "cancel"],
         answer: "fasten"
       },
       {
@@ -177,7 +180,7 @@
       },
       {
         sentence: "He decided to ___ a career in medicine.",
-        options: ["pursue", "delay", "abandon", "avoid"],
+        options: ["delay", "pursue", "abandon", "avoid"],
         answer: "pursue"
       }
     ];
